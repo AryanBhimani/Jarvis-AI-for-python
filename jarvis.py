@@ -10,11 +10,9 @@ engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
 
-
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
-
 
 def wishMe():
     hour = int(datetime.datetime.now().hour)
@@ -68,16 +66,16 @@ if __name__ == "__main__":
             speak(results)
 
         elif 'open youtube' in query:
-            webbrowser.open("https://www.youtube.com/")
+            webbrowser.open("youtube.com")
 
         elif 'open email' in query:
-            webbrowser.open("https://mail.google.com/mail/u/0/#inbox")
+            webbrowser.open("mail.google.com")
 
         elif 'open google' in query:
             webbrowser.open("google.com")
 
         elif 'open github' in query:
-            webbrowser.open("https://github.com/dashboard")  
+            webbrowser.open("github.com")  
 
         elif 'open stackoverflow' in query:
             webbrowser.open("stackoverflow.com")
@@ -100,7 +98,7 @@ if __name__ == "__main__":
             try:
                 speak("What should I say?")
                 content = takeCommand()
-                to = "harryyourEmail@gmail.com"    
+                to = "'youremail@gmail.com"    
                 sendEmail(to, content)
                 speak("Email has been sent!")
             except Exception as e:
