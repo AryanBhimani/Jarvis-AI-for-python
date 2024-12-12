@@ -1,4 +1,4 @@
-# Jarvis-AI-in-python
+# Jarvis-AI in python
 
 # New Terminl
 1. python.exe -m pip install --upgrade pip
